@@ -1,0 +1,580 @@
+
+    <%= pb_rails "title", props: { text: "Get Started!", size: 1, classname: "text-center py-5"} %>
+
+    
+    
+<%
+=begin%>
+================
+     Navbar
+================
+<%
+=end%>
+
+    <%= pb_rails("card", props: {padding: "none"}) do %>
+  
+      <div class="container">
+
+
+        <%= pb_rails("flex", props: {classname: "flex-container", spacing: "between"}) do %>
+          <%= pb_rails("flex/flex_item") do %>
+            <%= pb_rails("title", props: { text: "PB&J" }) %>
+            <%= pb_rails("caption", props: { text: "International", size: 'md' }) %>
+          <% end %>
+
+          <%= pb_rails("flex/flex_item") do %>
+            <%= pb_rails("flex", props: {horizontal: "right"}) do %>
+              <%= pb_rails("flex/flex_item") do %>
+                <%= pb_rails("icon", props: {
+                icon: "heart",
+                }) %>
+                <%= pb_rails("badge", props: {
+                  text: "4",
+                  variant: "primary"
+                }) %>
+                <% end %>
+              <%= pb_rails("flex/flex_item") do %>
+                <%= pb_rails("icon", props: {
+                  icon: "comment",
+                }) %>
+                <%= pb_rails("badge", props: {
+                  text: "2",
+                  variant: "primary"
+                }) %>
+              <% end %>
+              <%= pb_rails("flex/flex_item") do %>
+                <%= pb_rails("title", props: { text: "Indira Shree", tag: "h4", size: 4 }) %>
+              <% end %>
+              <%= pb_rails("flex/flex_item") do %>
+                <%= pb_rails("user", props: {
+                  orientation: "horizontal",
+                  align: "right",
+                  avatar_url: "https://randomuser.me/api/portraits/women/44.jpg"
+                }) %>
+              <% end %>
+            <% end %>
+          <% end %>
+        <% end %>
+          
+         
+
+      </div>
+      
+      <%= pb_rails("section_separator", props: { text: ""}) %>
+
+      
+      <div class="container">
+        <%= pb_rails("nav", props: { orientation: "horizontal"}) do %>
+          <%= pb_rails("nav/item", props: { text: "Dashboard", link: "#", active: true }) %>
+          <%= pb_rails("nav/item", props: { text: "Products", link: "#" }) %>
+          <%= pb_rails("nav/item", props: { text: "In Progress ", link: "#" }) %>
+          <%= pb_rails("nav/item", props: { text: "Settings", link: "#" }) %>
+        <% end %>
+      </div>
+
+    <% end %>
+
+
+
+        
+    
+<div class="container">
+      
+
+      
+    
+</div>
+
+<%
+=begin%>
+======================
+  Commerce Dashboard
+======================
+<%
+=end%>
+      
+<div class="container">
+<%= pb_rails("caption", props: { text: "Dashboard", size: 'lg',}) %>
+<%= pb_rails("title", props: { text: "Commerce Dashboard", tag: "h1", size: 1 }) %>
+
+
+<%= pb_rails("card") do %>
+ 
+  
+  <%= pb_rails("flex", props: {classname: "flex-container", spacing: "between"}) do %>
+    <%= pb_rails("flex/flex_item") do %><%= pb_rails("title", props: { text: "Key Performance Indicators", tag: "h1", size: 4 }) %><% end %>
+    <%= pb_rails("flex/flex_item") do %>
+      <%= pb_rails("icon_circle", props: {
+        icon: "user",
+        size: "sm"
+      }) %><% end %>
+    <% end %>
+
+    <% end %>
+
+
+
+  
+  
+
+
+
+<%= pb_rails("layout", props: {position: "left", size: "md", collapse: "md"}) do %>
+<%= pb_rails("layout/sidebar") do %>
+
+  <%= pb_rails("nav") do %>
+
+    
+      <%= pb_rails("nav/item", props: { text: "Revenue", link: "#", active: true  }) do %>
+        <%= pb_rails("dashboard_value", props: {
+        stat_change: {change: "increase", value: 26}
+        }) %>
+        
+      <% end %>
+    
+      <%= pb_rails("nav/item", props: { text: "Orders", link: "#" }) do %>
+        <%= pb_rails("dashboard_value", props: {
+        stat_change: {change: "decrease", value: 2}
+        }) %>
+      <% end %>
+
+      <%= pb_rails("nav/item", props: { text: "Profit", link: "#" }) do %><% end %>
+
+      <%= pb_rails("nav/item", props: { text: "Average Check", link: "#" }) do %>
+        <%= pb_rails("dashboard_value", props: {
+        stat_change: {change: "increase", value: 5}
+        }) %>
+      <% end %>
+
+      <%= pb_rails("nav/item", props: { text: "Canceled", link: "#" }) do %>
+        <%= pb_rails("dashboard_value", props: {
+        stat_change: {change: "decrease", value: 15}
+        }) %>
+      <% end %>
+
+      <%= pb_rails("nav/item", props: { text: "Repeat Sales", link: "#" }) do %><% end %>
+  
+  <% end %>
+<% end %>
+
+  <%= pb_rails("layout/body") do %>
+    <% data = [{
+        data: [48000, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+    }] %>
+
+    <%= pb_rails("line_graph", props: { id: "line-test", gradient: false, chart_data: data, point_start: 1, title: '', subtitle: 'Source: thesolarfoundation.com', axis_title: '' }  ) %>
+  <% end %>
+
+
+<% end %>
+
+<%
+=begin%>
+======================
+  Ticket Escalations
+======================  
+<%
+=end%>
+
+<%= pb_rails("section_separator", props: { text: "This Weeks Ticket Escalations", variant: "background"}) %>
+
+<%= pb_rails("flex") do %>
+ <%
+=begin%>
+  Card 1
+<%
+=end%>
+  <%= pb_rails("flex/flex_item", props: {fixed_size: "200px"}) do %>
+
+      <%= pb_rails("card", props: { padding: "none" }) do %>
+        <%= pb_rails("card", props: { padding: "sm", highlight: {position: "side", color:"info"} }) do %>
+          <%= pb_rails("flex", props: {classname: "flex-container", spacing: "between"}) do %>
+            <%= pb_rails("flex/flex_item") do %><%= pb_rails("caption", props: { text: "New" }) %><% end %>
+            <%= pb_rails("flex/flex_item") do %>
+              <%= pb_rails("pill", props: {
+                text: "25",
+                variant: "info"
+              }) %>
+            <% end %>
+        <% end %>
+
+        <% end %>
+
+        <%= pb_rails("section_separator") %>
+
+        <%= pb_rails("card/card_body", props: { padding: "none"}) do %>
+          <%= pb_rails("list", props: {ordered: false, dark: false, borderless: false, xpadding: true}) do %>
+            <%= pb_rails("list/item") do %>  
+              <%= pb_rails("message", props: {
+                message: "Missing part",
+                avatar_name: "blank",
+                avatar_url: "https://randomuser.me/api/portraits/men/50.jpg"
+              }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %> 
+              <%= pb_rails("message", props: {
+                message: "Not perform...",
+                avatar_name: "blank",
+                avatar_url: "https://randomuser.me/api/portraits/men/20.jpg"
+              }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %>  
+            <%= pb_rails("message", props: {
+              message: "Missing part",
+              avatar_name: "T J"
+            }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %>
+              <%= pb_rails("message", props: {
+                message: "Missing part",
+                avatar_name: "blank",
+                avatar_url: "https://randomuser.me/api/portraits/men/16.jpg"
+              }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %> 
+              <%= pb_rails("message", props: {
+              message: "Unexpected...",
+              avatar_name: "J C"
+            }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %> 
+              <%= pb_rails("message", props: {
+              message: "Need Techn...",
+              avatar_name: "M T"
+            }) %>
+            <% end %>
+          <% end %>
+
+        <% end %>
+
+        <%= pb_rails("section_separator") %>
+
+        <%= pb_rails("card/card_body", props: { padding: "sm" }) do %>
+          Show More
+        <% end %>
+      <% end %>
+  <% end %>
+
+  <%
+=begin%>
+  Card 2
+<%
+=end%>
+  <%= pb_rails("flex/flex_item", props: {fixed_size: "200px"}) do %>
+    <%= pb_rails("card", props: { padding: "none" }) do %>
+        <%= pb_rails("card", props: { padding: "sm", highlight: {position: "side", color:"primary"} }) do %>
+
+          <%= pb_rails("flex", props: {classname: "flex-container", spacing: "between"}) do %>
+            <%= pb_rails("flex/flex_item") do %><%= pb_rails("caption", props: { text: "Manage Feedback" }) %><% end %>
+            <%= pb_rails("flex/flex_item") do %>
+              <%= pb_rails("pill", props: {
+                text: "5",
+                variant: "primary"
+              }) %>
+            <% end %>
+        <% end %>
+          
+        <% end %>
+
+        <%= pb_rails("section_separator") %>
+
+        <%= pb_rails("card/card_body", props: { padding: "none"}) do %>
+          <%= pb_rails("list", props: {ordered: false, dark: false, borderless: false, xpadding: true}) do %>
+            <%= pb_rails("list/item") do %>  
+              <%= pb_rails("message", props: {
+                message: "Not perform...",
+                avatar_name: "blank",
+                avatar_url: "https://randomuser.me/api/portraits/men/48.jpg",
+              }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %> 
+              <%= pb_rails("message", props: {
+                message: "Missing part",
+                avatar_name: "blank",
+                avatar_url: "https://randomuser.me/api/portraits/women/47.jpg",
+              }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %>  
+              <%= pb_rails("message", props: {
+              message: "Missing part",
+              avatar_name: "J W"
+            }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %> 
+              <%= pb_rails("message", props: {
+                message: "Need Techn...",
+                avatar_name: "blank",
+                avatar_url: "https://randomuser.me/api/portraits/men/8.jpg"
+              }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %> 
+              <%= pb_rails("message", props: {
+              message: "Unexpected...",
+              avatar_name: "A R"
+            }) %>
+            <% end %>
+          <% end %>
+
+        <% end %>
+
+        
+      <% end %>
+  <% end %>
+  <%
+=begin%>
+  Card 3
+<%
+=end%>
+  <%= pb_rails("flex/flex_item", props: {fixed_size: "200px"}) do %>
+    <%= pb_rails("card", props: { padding: "none" }) do %>
+        <%= pb_rails("card", props: { padding: "sm", highlight: {position: "side", color:"warning"} }) do %>
+
+          <%= pb_rails("flex", props: {classname: "flex-container", spacing: "between"}) do %>
+            <%= pb_rails("flex/flex_item") do %><%= pb_rails("caption", props: { text: "Processing" }) %><% end %>
+            <%= pb_rails("flex/flex_item") do %>
+              <%= pb_rails("pill", props: {
+                text: "3",
+                variant: "warning"
+              }) %>
+            <% end %>
+        <% end %>
+          
+        <% end %>
+
+        <%= pb_rails("section_separator") %>
+
+        <%= pb_rails("card/card_body", props: { padding: "none"}) do %>
+          <%= pb_rails("list", props: {ordered: false, dark: false, borderless: false, xpadding: true}) do %>
+            <%= pb_rails("list/item") do %>  
+              <%= pb_rails("message", props: {
+                message: "Not Performing",
+                avatar_url: "https://randomuser.me/api/portraits/men/48.jpg",
+              }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %> List Item <% end %>
+            <%= pb_rails("list/item") do %>  
+            <%= pb_rails("avatar", props: { name: "Terry Johnson", size: "sm" }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %> List Item <% end %>
+          <% end %>
+
+        <% end %>
+      <% end %>
+  <% end %>
+  <%
+=begin%>
+  Card 4
+<%
+=end%>
+  <%= pb_rails("flex/flex_item", props: {fixed_size: "200px"}) do %>
+    <%= pb_rails("card", props: { padding: "none" }) do %>
+        <%= pb_rails("card", props: { padding: "sm", highlight: {position: "side", color:"error"} }) do %>
+
+          <%= pb_rails("flex", props: {classname: "flex-container", spacing: "between"}) do %>
+            <%= pb_rails("flex/flex_item") do %><%= pb_rails("caption", props: { text: "Awaiting Feedback" }) %><% end %>
+            <%= pb_rails("flex/flex_item") do %>
+              <%= pb_rails("pill", props: {
+                text: "2",
+                variant: "error"
+              }) %>
+            <% end %>
+        <% end %>
+          
+        <% end %>
+
+        <%= pb_rails("section_separator") %>
+
+        <%= pb_rails("card/card_body", props: { padding: "none"}) do %>
+          <%= pb_rails("list", props: {ordered: false, dark: false, borderless: false, xpadding: true}) do %>
+            <%= pb_rails("list/item") do %>  
+              <%= pb_rails("message", props: {
+                message: "Not Performing",
+                avatar_url: "https://randomuser.me/api/portraits/men/48.jpg",
+              }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %> List Item <% end %>
+            <%= pb_rails("list/item") do %>  
+            <%= pb_rails("avatar", props: { name: "Terry Johnson", size: "sm" }) %>
+            <% end %>
+          <% end %>
+
+        <% end %>
+
+      <% end %>
+  <% end %>
+  <%
+=begin%>
+  Card 5
+<%
+=end%>
+  <%= pb_rails("flex/flex_item", props: {fixed_size: "200px"}) do %>
+    <%= pb_rails("card", props: { padding: "none" }) do %>
+        <%= pb_rails("card", props: { padding: "sm", highlight: {position: "side", color:"success"} }) do %>
+
+          <%= pb_rails("flex", props: {classname: "flex-container", spacing: "between"}) do %>
+            <%= pb_rails("flex/flex_item") do %><%= pb_rails("caption", props: { text: "Approved" }) %><% end %>
+            <%= pb_rails("flex/flex_item") do %>
+              <%= pb_rails("pill", props: {
+                text: "15",
+                variant: "success"
+              }) %>
+            <% end %>
+        <% end %>
+          
+        <% end %>
+
+        <%= pb_rails("section_separator") %>
+
+        <%= pb_rails("card/card_body", props: { padding: "none"}) do %>
+          <%= pb_rails("list", props: {ordered: false, dark: false, borderless: false, xpadding: true}) do %>
+            <%= pb_rails("list/item") do %>  
+              <%= pb_rails("message", props: {
+                message: "Not Performing",
+                avatar_url: "https://randomuser.me/api/portraits/men/48.jpg",
+              }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %> List Item <% end %>
+            <%= pb_rails("list/item") do %>  
+            <%= pb_rails("avatar", props: { name: "Terry Johnson", size: "sm" }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %> List Item <% end %>
+            <%= pb_rails("list/item") do %> List Item <% end %>
+          <% end %>
+
+        <% end %>
+
+        <%= pb_rails("section_separator") %>
+
+        <%= pb_rails("card/card_body", props: { padding: "sm" }) do %>
+          Show More
+        <% end %>
+      <% end %>
+  <% end %>
+<% end %>
+
+
+
+
+
+
+
+
+
+<%
+=begin%>
+======================
+    Pipeline Chart
+======================  
+<%
+=end%>
+
+<%= pb_rails("card", props: { padding: "none" }) do %>
+  <%= pb_rails("card/card_body", props: { padding: "md" }) do %>
+    <%= pb_rails("title", props: { text: "Pipeline Chart", tag: "h4", size: 4 }) %>
+  <% end %>
+
+  <%= pb_rails("section_separator") %>
+
+  <%= pb_rails("card/card_body", props: { padding: "none" }) do %>
+    <%= pb_rails("list", props: {ordered: false, dark: false, borderless: false, xpadding: true}) do %>
+            <%= pb_rails("list/item") do %>
+
+              
+              <%= pb_rails("caption", props: { text: "Add to Cart", size: 'sm' }) %>
+              <span><%= pb_rails("progress_simple", props: { percent: 64.9 }) %></span>
+              <%= pb_rails("caption", props: { text: "100%", size: 'sm' }) %>
+              <%= pb_rails("title", props: { text: "2,577", tag: "h5", size: 4 }) %>
+              
+           
+            <% end %>
+            <%= pb_rails("list/item") do %> List Item <% end %>
+            <%= pb_rails("list/item") do %>  
+              
+            <% end %>
+            <%= pb_rails("list/item") do %> List Item <% end %>
+            <%= pb_rails("list/item") do %> List Item <% end %>
+          <% end %>
+  <% end %>
+
+<% end %>
+
+
+
+
+
+<%
+=begin%>
+======================
+    Quad Card
+======================  
+<%
+=end%>
+
+<div>
+
+<%= pb_rails("flex") do %>
+  <%= pb_rails("flex/flex_item", props: {fixed_size: "300px"}) do %>
+    <%= pb_rails("card") do %>
+      <%= pb_rails("icon_circle", props: {
+      icon: "calendar",
+      variant: "green",
+      size: "md"
+      }) %>
+
+      <%= pb_rails("title", props: { text: "1,426", tag: "h1", size: 1 }) %>
+      <%= pb_rails("caption", props: { text: "Tickets (YTD)", size: 'sm' }) %>
+    <% end %>
+  <% end %>
+  <%= pb_rails("flex/flex_item", props: {fixed_size: "300px"}) do %>
+    <%= pb_rails("card") do %>
+      <%= pb_rails("icon_circle", props: {
+        icon: "award",
+        variant: "red",
+        size: "md"
+      }) %>
+
+      <%= pb_rails("title", props: { text: "25", tag: "h1", size: 1 }) %>
+      <%= pb_rails("caption", props: { text: "Overdue (YTD)", size: 'sm' }) %>
+    <% end %>
+  <% end %>
+  
+  <%= pb_rails("flex/flex_item", props: {fixed_size: "300px"}) do %>
+    <%= pb_rails("card") do %>
+      <%= pb_rails("icon_circle", props: {
+        icon: "cloud",
+        variant: "teal",
+        size: "md"
+      }) %>
+
+      <%= pb_rails("title", props: { text: "97", tag: "h1", size: 1 }) %>
+      <%= pb_rails("caption", props: { text: "Closed Without Action (YTD)", size: 'sm' }) %>
+    <% end %>
+  <% end %>
+  <%= pb_rails("flex/flex_item", props: {fixed_size: "300px"}) do %>
+    <%= pb_rails("card") do %>
+      <%= pb_rails("icon_circle", props: {
+        icon: "bolt",
+        variant: "yellow",
+        size: "md"
+      }) %>
+
+      <%= pb_rails("title", props: { text: "896", tag: "h1", size: 1 }) %>
+      <%= pb_rails("caption", props: { text: "Escalated (YTD)", size: 'sm' }) %>
+    <% end %>
+  <% end %>
+<% end %>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
