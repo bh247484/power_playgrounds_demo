@@ -12,18 +12,30 @@
     
 }
 
+.inline-block {
+    display: inline-block;
+}
+
 
 .navb {
     padding: 5px;
 }
 
 .margin {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 20px;
 }
 
 .marginR {
     margin-right: 35px;
+}
+
+.margin2R {
+    margin-right: 15px;
+}
+
+.margin3R {
+    margin-right: 125px;
 }
 
 .alignR {
@@ -32,4 +44,40 @@
 
 .marginT {
     margin-top: 12.5px;
+}
+
+.show-more {
+    color: $primary;
+    text-align: center;
+}
+
+@mixin custom-distro($width) {
+    height: 6px;
+    width: $width;
+    background-color: $primary;
+    border-radius: 15%;
+}
+
+.custom-distro1 {
+    @include custom-distro(275px)
+}
+
+.custom-distro2 {
+    @include custom-distro(250px)
+}
+
+.custom-distro3 {
+    @include custom-distro(225px)
+}
+
+.custom-distro4 {
+    @include custom-distro(175px)
+}
+
+.custom-distro5 {
+    @include custom-distro(155px)
+}
+
+.custom-distro6 {
+    @include custom-distro(150px)
 }

@@ -1,8 +1,3 @@
-
-    <%= pb_rails "title", props: { text: "Get Started!", size: 1, classname: "text-center py-5"} %>
-
-    
-    
 <%
 =begin%>
 ================
@@ -71,17 +66,6 @@
       </div>
 
     <% end %>
-
-
-
-        
-    
-<div class="container">
-      
-
-      
-    
-</div>
 
 <%
 =begin%>
@@ -162,7 +146,7 @@
         data: [48000, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
     }] %>
 
-    <%= pb_rails("line_graph", props: { id: "line-test", gradient: false, chart_data: data, point_start: 1, title: '', subtitle: 'Source: thesolarfoundation.com', axis_title: '' }  ) %>
+    <%= pb_rails("line_graph", props: { id: "line-test", gradient: false, chart_data: data, point_start: 5.0, title: '', axis_title: '' }  ) %>
   <% end %>
 
 
@@ -189,7 +173,7 @@
   <%= pb_rails("flex/flex_item", props: {fixed_size: "200px"}) do %>
 
       <%= pb_rails("card", props: { padding: "none" }) do %>
-        <%= pb_rails("card", props: { padding: "sm", highlight: {position: "side", color:"info"} }) do %>
+        <%= pb_rails("card", props: { padding: "lg", highlight: {position: "side", color:"info"} }) do %>
           <%= pb_rails("flex", props: {classname: "flex-container", spacing: "between"}) do %>
             <%= pb_rails("flex/flex_item") do %><%= pb_rails("caption", props: { text: "New" }) %><% end %>
             <%= pb_rails("flex/flex_item") do %>
@@ -251,8 +235,8 @@
 
         <%= pb_rails("section_separator") %>
 
-        <%= pb_rails("card/card_body", props: { padding: "sm" }) do %>
-          Show More
+        <%= pb_rails("card/card_body", props: { padding: "xs" }) do %>
+            <p class="show-more"><strong>Show More</strong><p>
         <% end %>
       <% end %>
   <% end %>
@@ -264,7 +248,7 @@
 =end%>
   <%= pb_rails("flex/flex_item", props: {fixed_size: "200px"}) do %>
     <%= pb_rails("card", props: { padding: "none" }) do %>
-        <%= pb_rails("card", props: { padding: "sm", highlight: {position: "side", color:"primary"} }) do %>
+        <%= pb_rails("card", props: { padding: "md", highlight: {position: "side", color:"primary"} }) do %>
 
           <%= pb_rails("flex", props: {classname: "flex-container", spacing: "between"}) do %>
             <%= pb_rails("flex/flex_item") do %><%= pb_rails("caption", props: { text: "Manage Feedback" }) %><% end %>
@@ -329,7 +313,7 @@
 =end%>
   <%= pb_rails("flex/flex_item", props: {fixed_size: "200px"}) do %>
     <%= pb_rails("card", props: { padding: "none" }) do %>
-        <%= pb_rails("card", props: { padding: "sm", highlight: {position: "side", color:"warning"} }) do %>
+        <%= pb_rails("card", props: { padding: "lg", highlight: {position: "side", color:"warning"} }) do %>
 
           <%= pb_rails("flex", props: {classname: "flex-container", spacing: "between"}) do %>
             <%= pb_rails("flex/flex_item") do %><%= pb_rails("caption", props: { text: "Processing" }) %><% end %>
@@ -370,7 +354,7 @@
 =end%>
   <%= pb_rails("flex/flex_item", props: {fixed_size: "200px"}) do %>
     <%= pb_rails("card", props: { padding: "none" }) do %>
-        <%= pb_rails("card", props: { padding: "sm", highlight: {position: "side", color:"error"} }) do %>
+        <%= pb_rails("card", props: { padding: "md", highlight: {position: "side", color:"error"} }) do %>
 
           <%= pb_rails("flex", props: {classname: "flex-container", spacing: "between"}) do %>
             <%= pb_rails("flex/flex_item") do %><%= pb_rails("caption", props: { text: "Awaiting Feedback" }) %><% end %>
@@ -411,7 +395,7 @@
 =end%>
   <%= pb_rails("flex/flex_item", props: {fixed_size: "200px"}) do %>
     <%= pb_rails("card", props: { padding: "none" }) do %>
-        <%= pb_rails("card", props: { padding: "sm", highlight: {position: "side", color:"success"} }) do %>
+        <%= pb_rails("card", props: { padding: "lg", highlight: {position: "side", color:"success"} }) do %>
 
           <%= pb_rails("flex", props: {classname: "flex-container", spacing: "between"}) do %>
             <%= pb_rails("flex/flex_item") do %><%= pb_rails("caption", props: { text: "Approved" }) %><% end %>
@@ -447,15 +431,15 @@
 
         <%= pb_rails("section_separator") %>
 
-        <%= pb_rails("card/card_body", props: { padding: "sm" }) do %>
-          Show More
+        <%= pb_rails("card/card_body", props: { padding: "xs" }) do %>
+          <p class="show-more"><strong>Show More</strong><p>
         <% end %>
       <% end %>
   <% end %>
 <% end %>
 
 
-
+<div class="margin">
 <%= pb_rails("flex", props: {classname: "flex-container", spacing: "between"}) do %>
   
   
@@ -470,7 +454,7 @@
 <%
 =end%>
 
-<%= pb_rails("card", props: { padding: "none" }) do %>
+<%= pb_rails("card", props: { padding: "none", classname: "margin3R" }) do %>
   <%= pb_rails("card/card_body", props: { padding: "md" }) do %>
     <%= pb_rails("title", props: { text: "Pipeline Chart", tag: "h4", size: 4 }) %>
   <% end %>
@@ -483,18 +467,52 @@
 
               
               <%= pb_rails("caption", props: { text: "Add to Cart", size: 'sm' }) %>
-              <span>Distribution Bar Won't Render Inside List Item</span>
-              <%= pb_rails("caption", props: { text: "100%", size: 'sm' }) %>
+              <span class="custom-distro1 margin2R"></span>
+              <%= pb_rails("caption", props: { text: "100%", size: 'sm', classname: "margin2R" }) %>
               <%= pb_rails("title", props: { text: "2,577", tag: "h5", size: 4 }) %>
               
            
             <% end %>
-            <%= pb_rails("list/item") do %> List Item <% end %>
+            <%= pb_rails("list/item") do %>
+            
+              <%= pb_rails("caption", props: { text: "Shopping Cart", size: 'sm' }) %>
+              <span class="custom-distro2 margin2R"></span>
+              <%= pb_rails("caption", props: { text: "79%", size: 'sm', classname: "margin2R" }) %>
+              <%= pb_rails("title", props: { text: "2,023", tag: "h5", size: 4 }) %>
+            
+            <% end %>
             <%= pb_rails("list/item") do %>  
               
+              <%= pb_rails("caption", props: { text: "Payment Methods", size: 'sm' }) %>
+              <span class="custom-distro3 margin2R"></span>
+              <%= pb_rails("caption", props: { text: "59%", size: 'sm', classname: "margin2R" }) %>
+              <%= pb_rails("title", props: { text: "1,567", tag: "h5", size: 4 }) %>
+                
             <% end %>
-            <%= pb_rails("list/item") do %> List Item <% end %>
-            <%= pb_rails("list/item") do %> List Item <% end %>
+            <%= pb_rails("list/item") do %> 
+            
+              <%= pb_rails("caption", props: { text: "Delivery Methods", size: 'sm', classname: "marginR" }) %>
+              <span class="custom-distro4 margin2R"></span>
+              <%= pb_rails("caption", props: { text: "56%", size: 'sm', classname: "margin2R" }) %>
+              <%= pb_rails("title", props: { text: "1,252", tag: "h5", size: 4 }) %>
+
+             <% end %>
+            <%= pb_rails("list/item") do %> 
+
+              <%= pb_rails("caption", props: { text: "Confirm", size: 'sm', classname: "marginR" }) %>
+              <span class="custom-distro5 margin2R"></span>
+              <%= pb_rails("caption", props: { text: "49%", size: 'sm', classname: "margin2R" }) %>
+              <%= pb_rails("title", props: { text: "1,182", tag: "h5", size: 4 }) %>
+            
+             <% end %>
+            <%= pb_rails("list/item") do %> 
+            
+              <%= pb_rails("caption", props: { text: "Delivery", size: 'sm', classname: "marginR" }) %>
+              <span class="custom-distro6 margin2R"></span>
+              <%= pb_rails("caption", props: { text: "46%", size: 'sm', classname: "margin2R" }) %>
+              <%= pb_rails("title", props: { text: "1,098", tag: "h5", size: 4 }) %>
+
+             <% end %>
           <% end %>
   <% end %>
 
@@ -509,10 +527,10 @@
 <%
 =end%>
 <%= pb_rails("flex/flex_item") do %>
-<div>
+
 
 <%= pb_rails("flex", props: {wrap: true}) do %>
-  <%= pb_rails("flex/flex_item", props: {fixed_size: "250px"}) do %>
+  <%= pb_rails("flex/flex_item", props: {fixed_size: "275px"}) do %>
     <%= pb_rails("card") do %>
       <%= pb_rails("icon_circle", props: {
       icon: "calendar",
@@ -524,7 +542,7 @@
       <%= pb_rails("caption", props: { text: "Tickets (YTD)", size: 'sm' }) %>
     <% end %>
   <% end %>
-  <%= pb_rails("flex/flex_item", props: {fixed_size: "250px"}) do %>
+  <%= pb_rails("flex/flex_item", props: {fixed_size: "275px"}) do %>
     <%= pb_rails("card") do %>
       <%= pb_rails("icon_circle", props: {
         icon: "award",
@@ -537,7 +555,7 @@
     <% end %>
   <% end %>
   
-  <%= pb_rails("flex/flex_item", props: {fixed_size: "250px"}) do %>
+  <%= pb_rails("flex/flex_item", props: {fixed_size: "275px"}) do %>
     <%= pb_rails("card") do %>
       <%= pb_rails("icon_circle", props: {
         icon: "cloud",
@@ -549,7 +567,7 @@
       <%= pb_rails("caption", props: { text: "Closed Without Action (YTD)", size: 'sm' }) %>
     <% end %>
   <% end %>
-  <%= pb_rails("flex/flex_item", props: {fixed_size: "250px"}) do %>
+  <%= pb_rails("flex/flex_item", props: {fixed_size: "275px"}) do %>
     <%= pb_rails("card") do %>
       <%= pb_rails("icon_circle", props: {
         icon: "bolt",
@@ -564,7 +582,7 @@
 <% end %>
 
 
-</div>
+
 <% end %>
 
 
@@ -574,16 +592,6 @@
 <%
 =end%>
 <% end %>
-
-
 </div>
 
-
-<div class="test-div">
-  <h1>Header</h1>
-  <p>Paragraph</p>
 </div>
-
-
-
-
