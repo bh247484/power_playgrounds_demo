@@ -23,17 +23,17 @@
           <% end %>
 
           <%= pb_rails("flex/flex_item") do %>
-            <%= pb_rails("flex", props: {horizontal: "right"}) do %>
-              <%= pb_rails("flex/flex_item") do %>
+            <%= pb_rails("flex", props: {classname: "marginT"}) do %>
+              <%= pb_rails("flex/flex_item", props: {classname: "marginR"}) do %>
                 <%= pb_rails("icon", props: {
-                icon: "heart",
+                icon: "heart"
                 }) %>
                 <%= pb_rails("badge", props: {
                   text: "4",
                   variant: "primary"
                 }) %>
                 <% end %>
-              <%= pb_rails("flex/flex_item") do %>
+              <%= pb_rails("flex/flex_item", props: {classname: "marginR"}) do %>
                 <%= pb_rails("icon", props: {
                   icon: "comment",
                 }) %>
@@ -47,8 +47,6 @@
               <% end %>
               <%= pb_rails("flex/flex_item") do %>
                 <%= pb_rails("user", props: {
-                  orientation: "horizontal",
-                  align: "right",
                   avatar_url: "https://randomuser.me/api/portraits/women/44.jpg"
                 }) %>
               <% end %>
@@ -94,9 +92,10 @@
 =end%>
       
 <div class="container">
-<%= pb_rails("caption", props: { text: "Dashboard", size: 'lg',}) %>
-<%= pb_rails("title", props: { text: "Commerce Dashboard", tag: "h1", size: 1 }) %>
-
+  <div class="margin">
+    <%= pb_rails("caption", props: { text: "Dashboard", size: 'lg',}) %>
+    <%= pb_rails("title", props: { text: "Commerce Dashboard", tag: "h1", size: 1 }) %>
+  </div>
 
 <%= pb_rails("card") do %>
  
@@ -126,6 +125,7 @@
 
     
       <%= pb_rails("nav/item", props: { text: "Revenue", link: "#", active: true  }) do %>
+        
         <%= pb_rails("dashboard_value", props: {
         stat_change: {change: "increase", value: 26}
         }) %>
@@ -176,9 +176,11 @@
 <%
 =end%>
 
-<%= pb_rails("section_separator", props: { text: "This Weeks Ticket Escalations", variant: "background"}) %>
+<div class="margin">
+  <%= pb_rails("section_separator", props: { text: "This Weeks Ticket Escalations", variant: "background"}) %>
+</div>
 
-<%= pb_rails("flex") do %>
+<%= pb_rails("flex", props: { classname: "tickets", spacing: "between" }) do %>
  <%
 =begin%>
   Card 1
@@ -454,12 +456,12 @@
 
 
 
+<%= pb_rails("flex", props: {classname: "flex-container", spacing: "between"}) do %>
+  
+  
 
 
-
-
-
-
+<%= pb_rails("flex/flex_item") do %>
 <%
 =begin%>
 ======================
@@ -481,7 +483,7 @@
 
               
               <%= pb_rails("caption", props: { text: "Add to Cart", size: 'sm' }) %>
-              <span><%= pb_rails("progress_simple", props: { percent: 64.9 }) %></span>
+              <span>Distribution Bar Won't Render Inside List Item</span>
               <%= pb_rails("caption", props: { text: "100%", size: 'sm' }) %>
               <%= pb_rails("title", props: { text: "2,577", tag: "h5", size: 4 }) %>
               
@@ -498,10 +500,7 @@
 
 <% end %>
 
-
-
-
-
+<% end %>
 <%
 =begin%>
 ======================
@@ -509,11 +508,11 @@
 ======================  
 <%
 =end%>
-
+<%= pb_rails("flex/flex_item") do %>
 <div>
 
-<%= pb_rails("flex") do %>
-  <%= pb_rails("flex/flex_item", props: {fixed_size: "300px"}) do %>
+<%= pb_rails("flex", props: {wrap: true}) do %>
+  <%= pb_rails("flex/flex_item", props: {fixed_size: "250px"}) do %>
     <%= pb_rails("card") do %>
       <%= pb_rails("icon_circle", props: {
       icon: "calendar",
@@ -525,7 +524,7 @@
       <%= pb_rails("caption", props: { text: "Tickets (YTD)", size: 'sm' }) %>
     <% end %>
   <% end %>
-  <%= pb_rails("flex/flex_item", props: {fixed_size: "300px"}) do %>
+  <%= pb_rails("flex/flex_item", props: {fixed_size: "250px"}) do %>
     <%= pb_rails("card") do %>
       <%= pb_rails("icon_circle", props: {
         icon: "award",
@@ -538,7 +537,7 @@
     <% end %>
   <% end %>
   
-  <%= pb_rails("flex/flex_item", props: {fixed_size: "300px"}) do %>
+  <%= pb_rails("flex/flex_item", props: {fixed_size: "250px"}) do %>
     <%= pb_rails("card") do %>
       <%= pb_rails("icon_circle", props: {
         icon: "cloud",
@@ -550,7 +549,7 @@
       <%= pb_rails("caption", props: { text: "Closed Without Action (YTD)", size: 'sm' }) %>
     <% end %>
   <% end %>
-  <%= pb_rails("flex/flex_item", props: {fixed_size: "300px"}) do %>
+  <%= pb_rails("flex/flex_item", props: {fixed_size: "250px"}) do %>
     <%= pb_rails("card") do %>
       <%= pb_rails("icon_circle", props: {
         icon: "bolt",
@@ -566,14 +565,24 @@
 
 
 </div>
+<% end %>
 
 
-
+<%
+=begin%>
+  End Graph and Quad Card Flex-Between
+<%
+=end%>
+<% end %>
 
 
 </div>
 
 
+<div class="test-div">
+  <h1>Header</h1>
+  <p>Paragraph</p>
+</div>
 
 
 

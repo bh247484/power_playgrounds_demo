@@ -3,3 +3,33 @@
 @import "environment_styles/scaffold";
 
 // Begin your styles //
+
+.test-div {
+    background-color: orchid;
+    color: violet;
+    margin: 50px;
+    padding: 20px;
+    
+}
+
+
+.navb {
+    padding: 5px;
+}
+
+.margin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.marginR {
+    margin-right: 35px;
+}
+
+.alignR {
+    align-content: right;
+}
+
+.marginT {
+    margin-top: 12.5px;
+}
