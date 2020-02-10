@@ -4,47 +4,6 @@
 
 // Begin your styles //
 
-.test-div {
-    background-color: orchid;
-    color: violet;
-    margin: 50px;
-    padding: 20px;
-    
-}
-
-.inline-block {
-    display: inline-block;
-}
-
-
-.navb {
-    padding: 5px;
-}
-
-.margin {
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
-.marginR {
-    margin-right: 35px;
-}
-
-.margin2R {
-    margin-right: 15px;
-}
-
-.margin3R {
-    margin-right: 125px;
-}
-
-.alignR {
-    align-content: right;
-}
-
-.marginT {
-    margin-top: 12.5px;
-}
 
 .show-more {
     color: $primary;
@@ -80,4 +39,31 @@
 
 .custom-distro6 {
     @include custom-distro(150px)
+}
+
+// Utilities
+
+.margin {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.marginR {
+    margin-right: 35px;
+}
+
+.margin2R {
+    margin-right: 15px;
+}
+
+.margin3R {
+    margin-right: 125px;
+}
+
+.alignR {
+    align-content: right;
+}
+
+.marginT {
+    margin-top: 12.5px;
 }

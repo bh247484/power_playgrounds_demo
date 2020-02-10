@@ -10,9 +10,9 @@
   
       <div class="container">
 
-
         <%= pb_rails("flex", props: {classname: "flex-container", spacing: "between"}) do %>
           <%= pb_rails("flex/flex_item") do %>
+            <%= pb_rails("icon", props: { icon: "user", fixed_width: false }) %>
             <%= pb_rails("title", props: { text: "PB&J" }) %>
             <%= pb_rails("caption", props: { text: "International", size: 'md' }) %>
           <% end %>
@@ -94,11 +94,6 @@
     <% end %>
 
     <% end %>
-
-
-
-  
-  
 
 
 
@@ -331,19 +326,33 @@
 
         <%= pb_rails("card/card_body", props: { padding: "none"}) do %>
           <%= pb_rails("list", props: {ordered: false, dark: false, borderless: false, xpadding: true}) do %>
-            <%= pb_rails("list/item") do %>  
+            <%= pb_rails("list/item") do %> 
               <%= pb_rails("message", props: {
-                message: "Not Performing",
-                avatar_url: "https://randomuser.me/api/portraits/men/48.jpg",
+                message: "Missing part",
+                avatar_name: "H R"
               }) %>
             <% end %>
-            <%= pb_rails("list/item") do %> List Item <% end %>
-            <%= pb_rails("list/item") do %>  
-            <%= pb_rails("avatar", props: { name: "Terry Johnson", size: "sm" }) %>
+            <%= pb_rails("list/item") do %> 
+              <%= pb_rails("message", props: {
+                  message: "Not perform...",
+                  avatar_name: "blank",
+                  avatar_url: "https://randomuser.me/api/portraits/women/2.jpg"
+                }) %>
             <% end %>
-            <%= pb_rails("list/item") do %> List Item <% end %>
+            <%= pb_rails("list/item") do %> 
+                <%= pb_rails("message", props: {
+                message: "Need Techn...",
+                avatar_name: "P D"
+              }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %>
+              <%= pb_rails("message", props: {
+                message: "Need Techn...",
+                avatar_name: "blank",
+                avatar_url: "https://randomuser.me/api/portraits/women/8.jpg"
+              }) %>
+            <% end %>
           <% end %>
-
         <% end %>
       <% end %>
   <% end %>
@@ -374,13 +383,23 @@
           <%= pb_rails("list", props: {ordered: false, dark: false, borderless: false, xpadding: true}) do %>
             <%= pb_rails("list/item") do %>  
               <%= pb_rails("message", props: {
-                message: "Not Performing",
-                avatar_url: "https://randomuser.me/api/portraits/men/48.jpg",
+                message: "Need Techn...",
+                avatar_name: "blank",
+                avatar_url: "https://randomuser.me/api/portraits/men/3.jpg"
               }) %>
             <% end %>
-            <%= pb_rails("list/item") do %> List Item <% end %>
+            <%= pb_rails("list/item") do %> 
+              <%= pb_rails("message", props: {
+                message: "Missing part",
+                avatar_name: "blank",
+                avatar_url: "https://randomuser.me/api/portraits/men/4.jpg"
+              }) %>
+            <% end %>
             <%= pb_rails("list/item") do %>  
-            <%= pb_rails("avatar", props: { name: "Terry Johnson", size: "sm" }) %>
+              <%= pb_rails("message", props: {
+                message: "Not perform...",
+                avatar_name: "K S"
+              }) %>
             <% end %>
           <% end %>
 
@@ -415,16 +434,41 @@
           <%= pb_rails("list", props: {ordered: false, dark: false, borderless: false, xpadding: true}) do %>
             <%= pb_rails("list/item") do %>  
               <%= pb_rails("message", props: {
-                message: "Not Performing",
-                avatar_url: "https://randomuser.me/api/portraits/men/48.jpg",
+                message: "Missing part",
+                avatar_name: "K M"
               }) %>
             <% end %>
-            <%= pb_rails("list/item") do %> List Item <% end %>
-            <%= pb_rails("list/item") do %>  
-            <%= pb_rails("avatar", props: { name: "Terry Johnson", size: "sm" }) %>
+            <%= pb_rails("list/item") do %> 
+              <%= pb_rails("message", props: {
+                message: "Not perform...",
+                avatar_name: "T J"
+              }) %>
             <% end %>
-            <%= pb_rails("list/item") do %> List Item <% end %>
-            <%= pb_rails("list/item") do %> List Item <% end %>
+            <%= pb_rails("list/item") do %>  
+              <%= pb_rails("message", props: {
+                message: "Missing part",
+                avatar_name: "H C"
+              }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %> 
+              <%= pb_rails("message", props: {
+                message: "Missing part",
+                avatar_name: "blank",
+                avatar_url: "https://randomuser.me/api/portraits/women/7.jpg"
+              }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %> 
+              <%= pb_rails("message", props: {
+                message: "Unexpected...",
+                avatar_name: "K C"
+              }) %>
+            <% end %>
+            <%= pb_rails("list/item") do %> 
+              <%= pb_rails("message", props: {
+                message: "Need Techn...",
+                avatar_name: "R R"
+              }) %>
+            <% end %>
           <% end %>
 
         <% end %>
